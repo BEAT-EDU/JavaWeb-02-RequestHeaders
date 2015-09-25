@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  
+  <!-- Use the URL http://hostName/appName/show-request-headers for ShowRequestHeaders servlet -->
+  <servlet>
+    <servlet-name>ShowRequestHeaders Servlet</servlet-name>
+    <servlet-class>com.beat_software.javaweb.ShowRequestHeaders</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowRequestHeaders Servlet</servlet-name>
+    <url-pattern>/show-request-headers</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Use the URL http://hostName/appName/browser-insult for BrowserInsult servlet -->
+  <servlet>
+    <servlet-name>BrowserInsult Servlet</servlet-name>
+    <servlet-class>com.beat_software.javaweb.BrowserInsult</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BrowserInsult Servlet</servlet-name>
+    <url-pattern>/browser-insult</url-pattern>
+  </servlet-mapping>
+
+  <!-- Use the URL http://hostName/appName/long-servlet for LongServlet servlet -->
+  <servlet>
+    <servlet-name>LongServlet Servlet</servlet-name>
+    <servlet-class>com.beat_software.javaweb.LongServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LongServlet Servlet</servlet-name>
+    <url-pattern>/long-servlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- If the URL gives a directory but not a filename, try
+       index.jsp first and index.html second. If neither is
+       found, the result is server-specific (e.g., a  
+       directory listing or a 404 error).  
+  -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
